@@ -35,6 +35,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/VT-test/",
               "budgets": [
                 {
                   "type": "initial",

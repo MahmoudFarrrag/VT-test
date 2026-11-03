@@ -1,0 +1,56 @@
+<div id="top" class="page-home">
+  <section class="home-hero dark-section">
+    <div class="hero-gridline" aria-hidden="true"></div>
+    <div class="hero-copy" appReveal>
+      <p class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> INDEPENDENT DIGITAL STUDIO · EST. 2018</p>
+      <h1>Ideas deserve<br>a <span class="gradient-type">better build.</span></h1>
+      <p class="hero-lede">We turn ambitious thinking into digital products that feel inevitable. Strategy, design, and engineering, working as one.</p>
+      <div class="hero-actions"><a class="button button--bright" routerLink="/contact">Let’s build something great <span aria-hidden="true">↗</span></a><a class="text-link text-link--light" routerLink="/projects">Explore our work <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-proof"><span class="proof-avatars"><i>MC</i><i>JE</i><i>PR</i></span><span>Small senior teams.<br><b>Outsized outcomes.</b></span></div>
+    </div>
+    <div class="hero-art" aria-label="Abstract interface illustration of connected product systems">
+      <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+      <div class="art-node node-core"><span class="node-spark">✳</span><strong>VT</strong><small>BUILD / 01</small></div>
+      <div class="art-node node-ui"><span class="node-icon">◫</span><span>Product<br>experience</span><b>01</b></div>
+      <div class="art-node node-data"><span class="node-icon">⌁</span><span>Intelligent<br>systems</span><b>02</b></div>
+      <div class="art-node node-code"><span class="node-icon">&#123; &#125;</span><span>Engineering<br>excellence</span><b>03</b></div>
+      <div class="art-tag">DESIGN MEETS SYSTEMS <span>● LIVE</span></div>
+      <div class="art-coordinate">30° 16' 2.4" N<br>97° 44' 35.1" W</div>
+      <div class="art-signal signal-a"></div><div class="art-signal signal-b"></div>
+    </div>
+    <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span>01 — 04</span><div class="hero-scroll-line"></div></div>
+  </section>
+
+  <section class="client-strip"><span class="strip-label">A FEW TOOLS IN OUR KIT</span><div class="tool-logos"><span>◈ <b>Google Cloud</b></span><span>◉ <b>Stripe</b></span><span>⬡ <b>Vercel</b></span><span>✦ <b>Figma</b></span><span>◌ <b>OpenAI</b></span><span>◉ <b>AWS</b></span></div></section>
+
+  <section class="section services-section">
+    <div class="section-heading" appReveal><div><p class="eyebrow">WHAT WE MAKE POSSIBLE</p><h2>One team. From<br><span class="serif-italic">first thought</span> to first light.</h2></div><p class="heading-note">The best digital work happens when the disciplines stop handing off and start building together.</p></div>
+    <div class="service-list">
+      <a class="service-row" routerLink="/contact" appReveal><span class="service-index">01</span><span class="service-title">Digital product strategy</span><span class="service-detail">Find the signal. Set a direction. Make the next move count.</span><span class="service-arrow">↗</span></a>
+      <a class="service-row" routerLink="/contact" appReveal><span class="service-index">02</span><span class="service-title">Experience &amp; interface</span><span class="service-detail">Distinctive, useful experiences designed around real people.</span><span class="service-arrow">↗</span></a>
+      <a class="service-row" routerLink="/contact" appReveal><span class="service-index">03</span><span class="service-title">Software engineering</span><span class="service-detail">Solid foundations, beautiful details, and room to grow.</span><span class="service-arrow">↗</span></a>
+      <a class="service-row" routerLink="/contact" appReveal><span class="service-index">04</span><span class="service-title">AI &amp; intelligent systems</span><span class="service-detail">Thoughtful automation that gives people more agency.</span><span class="service-arrow">↗</span></a>
+    </div>
+  </section>
+
+  <section class="featured-section dark-section">
+    <div class="section-heading section-heading--light" appReveal><div><p class="eyebrow eyebrow--light">SELECTED CONCEPTS · 2024—25</p><h2>Good work has<br><span class="serif-italic">a point of view.</span></h2></div><a class="text-link text-link--light" routerLink="/projects">All projects <span>↗</span></a></div>
+    <div class="featured-stage" [style.--slide]="slide" aria-live="polite">
+      <article class="featured-card" *ngFor="let project of featured; let i = index" [class.featured-card--active]="i === slide">
+        <a [routerLink]="['/projects', project.slug]" class="featured-image" [style.background-color]="project.accent"><img [src]="project.image" [alt]="project.name + ' concept project visual'" loading="lazy"><span class="image-index">0{{ i + 1 }} / 04</span><span class="image-open">↗</span></a>
+        <div class="featured-meta"><div><p class="eyebrow eyebrow--light">{{ project.industry }} · {{ project.year }} · CONCEPT</p><h3>{{ project.name }}</h3><p>{{ project.summary }}</p></div><a class="round-arrow" [routerLink]="['/projects', project.slug]" [attr.aria-label]="'Explore ' + project.name">↗</a></div>
+      </article>
+      <div class="featured-controls"><span>0{{ slide + 1 }} <i>/</i> 04</span><button type="button" (click)="moveSlide(-1)" aria-label="Previous project">←</button><button type="button" (click)="moveSlide(1)" aria-label="Next project">→</button></div>
+    </div>
+  </section>
+
+  <section class="stats-band"><div class="stats-intro" appReveal><p class="eyebrow">A LITTLE CONTEXT</p><h2>Ambition, with<br><span class="serif-italic">a track record.</span></h2></div><div class="stat" appReveal><strong appCount="8">08<span>+</span></strong><span>Years making<br>digital matter</span></div><div class="stat" appReveal><strong appCount="42">42</strong><span>Products brought<br>into focus</span></div><div class="stat" appReveal><strong appCount="96">96<span>%</span></strong><span>Partner teams<br>return to build</span></div></section>
+
+  <section class="section process-section"><div class="section-heading" appReveal><div><p class="eyebrow">HOW WE MOVE</p><h2>Clear thinking.<br><span class="serif-italic">Considered making.</span></h2></div><p class="heading-note">A deliberate process gives creativity somewhere useful to go.</p></div><div class="process-grid"><article appReveal><span class="process-mark">01</span><h3>Listen &amp; frame</h3><p>We get close to your users, business, and constraints to find the problem worth solving.</p></article><article appReveal><span class="process-mark">02</span><h3>Shape &amp; test</h3><p>We make the idea tangible early, then learn from prototypes and real feedback.</p></article><article appReveal><span class="process-mark">03</span><h3>Build &amp; evolve</h3><p>We ship carefully, measure what matters, and leave the product better equipped for what’s next.</p></article></div></section>
+
+  <section class="why-section"><div class="why-image" role="img" aria-label="Modern collaborative studio workspace" style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85')"><div class="image-caption">THOUGHTFUL BY DESIGN<br><span>Built around people, from day one.</span></div></div><div class="why-copy" appReveal><p class="eyebrow">THE VT DIFFERENCE</p><h2>Senior minds.<br><span class="serif-italic">No theatre.</span></h2><p>We keep our teams intentionally small and our work unusually close. You’ll talk directly with the people designing and building your product, and know why each decision matters.</p><div class="why-points"><span>↗ <b>Direct collaboration</b></span><span>↗ <b>Engineering with care</b></span><span>↗ <b>Clarity at every step</b></span></div><a class="text-link" routerLink="/about">Get to know us <span>↗</span></a></div></section>
+
+  <section class="tech-section"><p class="eyebrow">TOOLS ARE A MEANS, NOT THE POINT</p><div class="tech-layout"><h2>Made for what’s<br><span class="serif-italic">next.</span></h2><div class="tech-cloud"><span>Angular</span><span>TypeScript</span><span>Node.js</span><span>React Native</span><span>Python</span><span>Google Cloud</span><span>Figma</span><span>PostgreSQL</span><span>OpenAI</span><span>Azure</span><span>Flutter</span><span>Stripe</span></div></div></section>
+
+  <section class="closing-cta dark-section"><div class="closing-orbit" aria-hidden="true"></div><p class="eyebrow eyebrow--light">THE NEXT GOOD THING STARTS SOMEWHERE</p><h2>Let’s make it<br><span class="gradient-type">real.</span></h2><a class="button button--bright" routerLink="/contact">Start a conversation <span>↗</span></a><p class="closing-note">A first hello. No pitch deck required.</p></section>
+</div>
